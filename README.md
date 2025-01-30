@@ -1,218 +1,218 @@
 
-# YouDub-webui: 优质视频中文化工具
-## 目录
-- [YouDub-webui: 优质视频中文化工具](#youdub-webui-优质视频中文化工具)
-  - [目录](#目录)
-  - [简介](#简介)
-  - [主要特点](#主要特点)
-  - [安装与使用指南](#安装与使用指南)
-    - [1. 克隆仓库](#1-克隆仓库)
-    - [2. 安装依赖](#2-安装依赖)
-      - [自动安装](#自动安装)
-      - [手动安装](#手动安装)
-    - [3. 环境设置](#3-环境设置)
-    - [4. 运行程序](#4-运行程序)
-      - [自动运行](#自动运行)
-      - [手动运行](#手动运行)
-  - [使用步骤](#使用步骤)
-    - [1. **全自动 (Do Everything)**](#1-全自动-do-everything)
-    - [2. **下载视频 (Download Video)**](#2-下载视频-download-video)
-    - [3. **人声分离 (Demucs Interface)**](#3-人声分离-demucs-interface)
-    - [4. **语音识别 (Whisper Inference)**](#4-语音识别-whisper-inference)
-    - [5. **字幕翻译 (Translation Interface)**](#5-字幕翻译-translation-interface)
-    - [6. **语音合成 (TTS Interface)**](#6-语音合成-tts-interface)
-    - [7. **视频合成 (Synthesize Video Interface)**](#7-视频合成-synthesize-video-interface)
-  - [技术细节](#技术细节)
-    - [AI 语音识别](#ai-语音识别)
-    - [大型语言模型翻译](#大型语言模型翻译)
-    - [AI 声音克隆](#ai-声音克隆)
-    - [视频处理](#视频处理)
-  - [贡献指南](#贡献指南)
-  - [许可协议](#许可协议)
-  - [支持与联系方式](#支持与联系方式)
+# YouDub-webui: High-quality video localization tool
+## Table of contents
+- [YouDub-webui: High-quality video localization tool](#youdub-webui-High-quality video localization tool)
+  - [Directory](#Directory)
+  - [Introduction](#Introduction)
+  - [Main Features](#Main Features)
+  - [Installation and Usage Guide](#Installation and Usage Guide)
+    - [1. Clone the repository](#1-Clone the repository)
+    - [2. Install dependencies](#2-Install dependencies)
+      - [Automatic installation](#Automatic installation)
+      - [Manual Installation](#Manual Installation)
+    - [3. Environment Settings](#3-Environment Settings)
+    - [4. Run the program](#4-Run the program)
+      - [Autorun](#Autorun)
+      - [Manual Run](#Manual Run)
+  - [Usage steps](#Usage steps)
+    - [1. **Fully automatic (Do Everything)**](#1-Fully automatic-do-everything)
+    - [2. **Download Video**](#2-Download-video)
+    - [3. Demucs Interface]
+    - [4. Whisper Inference]
+    - [5. **Subtitle Translation (Translation Interface)**](#5-Subtitle Translation-translation-interface)
+    - [6. **Speech Synthesis (TTS Interface)**](#6-speech synthesis-tts-interface)
+    - [7. Synthesize Video Interface](#7-Synthesize-video-interface)
+  - [Technical Details](#Technical Details)
+    - [AI Speech Recognition](#ai-speech-recognition)
+    - [Large Language Model Translation](#Large Language Model Translation)
+    - [AI Voice Cloning](#ai-voice-cloning)
+    - [Video Processing](#Video Processing)
+  - [Contribution Guidelines](#Contribution Guidelines)
+  - [License Agreement](#License Agreement)
+  - [Support and Contact](#Support and Contact)
 
-## 简介
-`YouDub-webui` 是 [`YouDub`](https://github.com/liuzhao1225/YouDub) 项目的网页交互版本，基于 `Gradio` 构建，为用户提供简易操作界面来访问和使用 [`YouDub`](https://github.com/liuzhao1225/YouDub) 的强大功能。[`YouDub`](https://github.com/liuzhao1225/YouDub) 是一个开创性的开源工具，旨在将 YouTube 和其他平台上的高质量视频翻译和配音成中文版本。该工具结合了最新的 AI 技术，包括语音识别、大型语言模型翻译，以及 AI 声音克隆技术，提供与原视频相似的中文配音，为中文用户提供卓越的观看体验。
+## Introduction
+`YouDub-webui` is a web interactive version of the [`YouDub`](https://github.com/liuzhao1225/YouDub) project, built on `Gradio`, providing users with a simple interface to access and use the powerful features of [`YouDub`](https://github.com/liuzhao1225/YouDub). [`YouDub`](https://github.com/liuzhao1225/YouDub) is a groundbreaking open source tool designed to translate and dub high-quality videos on YouTube and other platforms into Chinese versions. The tool combines the latest AI technologies, including speech recognition, large language model translation, and AI sound cloning technology to provide Chinese dubbing similar to the original video, providing Chinese users with an excellent viewing experience.
 
-`YouDub-webui` 适用于多种场景，包括教育、娱乐和专业翻译，特别适合那些希望将国外优秀视频内容本地化的用户。此工具的简洁界面使得即使是非技术用户也能轻松上手，实现视频的快速中文化处理。
+`YouDub-webui` is suitable for a variety of scenarios, including education, entertainment and professional translation, and is particularly suitable for users who want to localize excellent foreign video content. The simple interface of this tool makes it easy for even non-technical users to get started and quickly localize videos.
 
-了解更多关于 `YouDub-webui` 的信息和示例，请访问我们的 [bilibili 视频主页](https://space.bilibili.com/1263732318)。为了更好地服务社区，我们也设立了微信群组，欢迎通过扫描下方的[二维码](#支持与联系方式)加入我们，共同探讨和贡献于 `YouDub-webui` 的发展。
+For more information and examples about `YouDub-webui`, please visit our [bilibili video homepage](https://space.bilibili.com/1263732318). In order to better serve the community, we have also set up a WeChat group. Welcome to join us by scanning the [QR code](#Support and Contact) below to discuss and contribute to the development of `YouDub-webui`.
 
 
-当然，我将重新撰写 `YouDub-webui` 的主要特点部分。
+Of course, I will rewrite the main features section of `YouDub-webui`.
 
 ---
 
-## 主要特点
-`YouDub-webui` 融合了多项先进技术，提供了一套完整的视频中文化工具包，其主要特点包括：
+## Main Features
+`YouDub-webui` integrates a number of advanced technologies and provides a complete set of video localization toolkits. Its main features include:
 
-- **视频下载**: 支持通过链接直接下载 YouTube 视频。无论是单个视频、播放列表还是频道内的多个视频，均能轻松下载。
-- **AI 语音识别**: 利用先进的 AI 技术，将视频中的语音高效转换为文字。不仅提供精确的语音到文本转换，还能自动对齐时间并识别不同说话者，极大地增强了信息的丰富性和准确性。
-- **大型语言模型翻译**: 结合大型语言模型如 GPT，实现快速且精准的中文翻译。无论是俚语还是专业术语，均能得到恰当的翻译，确保内容的准确性与地道性。
-- **AI 声音克隆**: 通过 AI 声音克隆技术，生成与原视频配音相似的中文语音。这不仅提升了视频的观看体验，也保留了原视频的情感和语调特色。
-- **视频处理**: 综合了音视频同步处理、字幕添加、视频播放速度调整和帧率设置等多项功能。用户可以根据需要生成高质量的最终视频，实现无缝的观看体验。
-- **自动上传**: 支持将最终视频自动上传到 Bilibili 平台。用户可以在不离开 `YouDub-webui` 的情况下，将视频上传到 Bilibili 平台，实现一键式的视频中文化处理。
+- **Video Download**: Supports downloading YouTube videos directly through links. Whether it is a single video, a playlist or multiple videos in a channel, it can be downloaded easily.
+- **AI Speech Recognition**: Using advanced AI technology, the speech in the video is efficiently converted into text. It not only provides accurate speech-to-text conversion, but also automatically aligns time and identifies different speakers, greatly enhancing the richness and accuracy of information.
+- **Large Language Model Translation**: Combined with large language models such as GPT, fast and accurate Chinese translation is achieved. Whether it is slang or professional terms, they can be properly translated to ensure the accuracy and authenticity of the content.
+- **AI Voice Cloning**: Through AI voice cloning technology, Chinese voices similar to the original video dubbing are generated. This not only improves the viewing experience of the video, but also retains the emotional and intonation characteristics of the original video.
+- **Video Processing**: It integrates multiple functions such as audio and video synchronization processing, subtitle addition, video playback speed adjustment and frame rate setting. Users can generate high-quality final videos as needed to achieve a seamless viewing experience.
+- **Automatic upload**: Supports automatic uploading of the final video to the Bilibili platform. Users can upload videos to the Bilibili platform without leaving `YouDub-webui`, realizing one-click video localization.
 
-`YouDub-webui` 的这些特点使其成为一个强大且易于使用的视频中文化工具，无论是个人用户还是专业团队，都能从中受益。
+These features of `YouDub-webui` make it a powerful and easy-to-use video localization tool that can benefit both individual users and professional teams.
 
 
-## 安装与使用指南
+## Installation and Usage Guide
 
-为了使用 `YouDub-webui`，请遵循以下步骤来安装和配置您的环境：
+To use YouDub-webui, follow these steps to install and configure your environment:
 
-### 1. 克隆仓库
-首先，克隆 `YouDub-webui` 仓库到您的本地系统：
+### 1. Clone the repository
+First, clone the YouDub-webui repository to your local system:
 ```bash
 git clone https://github.com/liuzhao1225/YouDub-webui.git
 ```
 
-### 2. 安装依赖
-您可以选择自动安装或手动安装依赖：
+### 2. Install dependencies
+You can choose to install dependencies automatically or manually:
 
-#### 自动安装
-- 进入 `YouDub-webui` 目录，运行 `setup_windows` 脚本。
-- 脚本会在当前目录创建一个 `venv` 虚拟环境，并自动安装所需依赖，包括 CUDA 12.1 版本的 PyTorch。
+#### Automatic Installation
+- Enter the `YouDub-webui` directory and run the `setup_windows` script.
+- The script will create a `venv` virtual environment in the current directory and automatically install the required dependencies, including the CUDA 12.1 version of PyTorch.
 
-#### 手动安装
-- 进入 `YouDub-webui` 目录，使用以下命令安装依赖：
+#### Manual Installation
+- Enter the `YouDub-webui` directory and use the following command to install dependencies:
   ```bash
   cd YouDub-webui
   pip install -r requirements.txt
   ```
-- 由于 TTS 依赖的特殊性，所以将 TTS 移出了 `requirements.txt`，需要手动安装：
+- Due to the special nature of TTS dependencies, TTS has been removed from `requirements.txt` and needs to be installed manually:
   ```bash
   pip install TTS
   ```
-- 默认安装为 CPU 版本的 PyTorch 如果你需要手动安装特定 CUDA 版本的 PyTorch，可根据您的 CUDA 版本从 [PyTorch 官方网站](https://pytorch.org/) 获取安装命令。
+- The default installation is the CPU version of PyTorch. If you need to manually install a specific CUDA version of PyTorch, you can get the installation command from the [PyTorch official website](https://pytorch.org/) according to your CUDA version.
 
-### 3. 环境设置
-在运行前，请配置环境变量：
+### 3. Environment Setup
+Before running, please configure the environment variables:
 
-- **环境变量配置**：将 `.env.example` 改名为 `.env` 并填入以下环境变量：
-  - `OPENAI_API_KEY`: OpenAI API 密钥，格式通常为 `sk-xxx`。
-  - `MODEL_NAME`: 模型名称，如 'gpt-4' 或 'gpt-3.5-turbo'。
-  - `OPENAI_API_BASE`: OpenAI API 基础 URL，如果使用自己部署的模型，请填入。
-  - `HF_TOKEN`: Hugging Face token，用于 speaker diarization 功能。
-  - `HF_ENDPOINT`: 如果从 `huggingface` 下载模型时出错，可以添加此环境变量。
-  - `APPID` 和 `ACCESS_TOKEN`: 火山引擎 TTS 所需的凭据。
-  - `BILI_BASE64`: Bilibili API 所需的凭据。获取方法请参考 [bilibili-toolman 准备凭据](https://github.com/mos9527/bilibili-toolman?tab=readme-ov-file#%E5%87%86%E5%A4%87%E5%87%AD%E6%8D%AE)。
+- **Environment variable configuration**: Rename `.env.example` to `.env` and fill in the following environment variables:
+  - `OPENAI_API_KEY`: OpenAI API key, usually in the format of `sk-xxx`.
+  - `MODEL_NAME`: Model name, such as 'gpt-4' or 'gpt-3.5-turbo'.
+  - `OPENAI_API_BASE`: OpenAI API base URL. If you use your own deployed model, please fill it in.
+  - `HF_TOKEN`: Hugging Face token, used for speaker diarization.
+  - `HF_ENDPOINT`: If you get errors downloading models from `huggingface`, you can add this environment variable.
+  - `APPID` and `ACCESS_TOKEN`: Credentials required for Volcano Engine TTS.
+  - `BILI_BASE64`: The credentials required by the Bilibili API. For more information, please refer to [bilibili-toolman Preparing Credentials](https://github.com/mos9527/bilibili-toolman?tab=readme-ov-file#%E5%87%86%E5%A4%87%E5%87%AD%E6%8D%AE) for how to obtain them.
 
-### 4. 运行程序
-选择以下任一方式运行程序：
+### 4. Run the program
+Choose one of the following ways to run the program:
 
-#### 自动运行
-- 在 `YouDub-webui` 目录下运行 `run_windows.bat`。
+#### Automatically run
+- Run `run_windows.bat` in the `YouDub-webui` directory.
 
-#### 手动运行
-- 使用以下命令启动主程序：
+#### Manual Run
+- Start the main program using the following command:
   ```bash
   python app.py
   ```
 
-## 使用步骤
+## Usage Steps
 
-### 1. **全自动 (Do Everything)**
+### 1. **Do Everything**
 
-此界面是一个一站式的解决方案，它将执行从视频下载到视频合成的所有步骤。
+This interface is a one-stop solution that will perform all steps from video downloading to video synthesis.
 
-- **Root Folder**: 设置视频文件的根目录。
-- **Video URL**: 输入视频或播放列表或频道的URL。
-- **Number of videos to download**: 设置要下载的视频数量。
-- **Resolution**: 选择下载视频的分辨率。
-- **Demucs Model**: 选择用于音频分离的Demucs模型。
-- **Demucs Device**: 选择音频分离的处理设备。
-- **Number of shifts**: 设置音频分离时的移位数。
-- **Whisper Model**: 选择用于语音识别的Whisper模型。
-- **Whisper Download Root**: 设置Whisper模型的下载根目录。
-- **Whisper Batch Size**: 设置Whisper处理的批量大小。
-- **Whisper Diarization**: 选择是否进行说话者分离。
-- **Translation Target Language**: 选择字幕的目标翻译语言。
-- **Force Bytedance**: 选择是否强制使用Bytedance语音合成。
-- **Subtitles**: 选择是否在视频中包含字幕。
-- **Speed Up**: 设置视频播放速度。
-- **FPS**: 设置视频的帧率。
-- **Max Workers**: 设置处理任务的最大工作线程数。
-- **Max Retries**: 设置任务失败后的最大重试次数。
-- **Auto Upload Video**: 选择是否自动上传视频到Bilibili。
+- **Root Folder**: Set the root directory of video files.
+- **Video URL**: Enter the URL of the video or playlist or channel.
+- **Number of videos to download**: Set the number of videos to download.
+- **Resolution**: Select the resolution of the downloaded video.
+- **Demucs Model**: Select the Demucs model for audio separation.
+- **Demucs Device**: Select the audio separation processing device.
+- **Number of shifts**: Set the number of shifts when separating audio.
+- **Whisper Model**: Select the Whisper model for speech recognition.
+- **Whisper Download Root**: Set the download root directory of Whisper models.
+- **Whisper Batch Size**: Set the batch size for Whisper processing.
+- **Whisper Diarization**: Select whether to perform speaker separation.
+- **Translation Target Language**: Select the target translation language for the subtitles.
+- **Force Bytedance**: Select whether to force the use of Bytedance speech synthesis.
+- **Subtitles**: Choose whether to include subtitles in the video.
+- **Speed ​​Up**: Set the video playback speed.
+- **FPS**: Set the frame rate of the video.
+- **Max Workers**: Set the maximum number of worker threads to process tasks.
+- **Max Retries**: Set the maximum number of retries after a task fails.
+- **Auto Upload Video**: Select whether to automatically upload videos to Bilibili.
 
-### 2. **下载视频 (Download Video)**
+### 2. **Download Video**
 
-此界面用于单独下载视频。
+This interface is used to download videos individually.
 
-- **Video URL**: 输入视频或播放列表或频道的URL。
-- **Output Folder**: 设置视频下载后的输出文件夹。
-- **Resolution**: 选择下载视频的分辨率。
-- **Number of videos to download**: 设置要下载的视频数量。
+- **Video URL**: Enter the URL of the video or playlist or channel.
+- **Output Folder**: Set the output folder for the video after downloading.
+- **Resolution**: Select the resolution of the downloaded video.
+- **Number of videos to download**: Set the number of videos to download.
 
-### 3. **人声分离 (Demucs Interface)**
+### 3. **Vocal Separation (Demucs Interface)**
 
-此界面用于从视频中分离人声。
+This interface is used to separate human voice from video.
 
-- **Folder**: 设置包含视频的文件夹。
-- **Model**: 选择用于音频分离的Demucs模型。
-- **Device**: 选择音频分离的处理设备。
-- **Progress Bar in Console**: 选择是否在控制台显示进度条。
-- **Number of shifts**: 设置音频分离时的移位数。
+- **Folder**: Set the folder containing videos.
+- **Model**: Select the Demucs model for audio separation.
+- **Device**: Select the processing device for audio separation.
+- **Progress Bar in Console**: Choose whether to display the progress bar in the console.
+- **Number of shifts**: Set the number of shifts when separating audio.
 
-### 4. **语音识别 (Whisper Inference)**
+### 4. Whisper Inference
 
-此界面用于从视频音频中进行语音识别。
+This interface is used for speech recognition from video audio.
 
-- **Folder**: 设置包含视频的文件夹。
-- **Model**: 选择用于语音识别的Whisper模型。
-- **Download Root**: 设置Whisper模型的下载根目录。
-- **Device**: 选择语音识别的处理设备。
-- **Batch Size**: 设置Whisper处理的批量大小。
-- **Diarization**: 选择是否进行说话者分离。
+- **Folder**: Set the folder containing videos.
+- **Model**: Select the Whisper model to use for speech recognition.
+- **Download Root**: Set the download root directory of Whisper models.
+- **Device**: Select the processing device for speech recognition.
+- **Batch Size**: Set the batch size for Whisper processing.
+- **Diarization**: Select whether to perform speaker separation.
 
-### 5. **字幕翻译 (Translation Interface)**
+### 5. **Subtitle Translation (Translation Interface)**
 
-此界面用于将识别出的语音转换为字幕并翻译。
+This interface is used to convert the recognized speech into subtitles and translate them.
 
-- **Folder**: 设置包含视频的文件夹。
-- **Target Language**: 选择字幕的目标翻译语言。
+- **Folder**: Set the folder containing videos.
+- **Target Language**: Select the target language for subtitle translation.
 
-### 6. **语音合成 (TTS Interface)**
+### 6. **Speech Synthesis (TTS Interface)**
 
-此界面用于将翻译后的文字转换为语音。
+This interface is used to convert the translated text into speech.
 
-- **Folder**: 设置包含视频的文件夹。
-- **Force Bytedance**: 选择是否强制使用Bytedance语音合成。
+- **Folder**: Set the folder containing videos.
+- **Force Bytedance**: Select whether to force the use of Bytedance speech synthesis.
 
-### 7. **视频合成 (Synthesize Video Interface)**
+### 7. **Synthesize Video Interface**
 
-此界面用于将视频、字幕和语音合成为最终视频。
+This interface is used to synthesize video, subtitles and speech into the final video.
 
-- **Folder**: 设置包含视频的文件夹。
-- **Subtitles**: 选择是否在视频中包含字幕。
-- **Speed Up**: 设置视频播放速度。
-- **FPS**: 设置视频的帧率。
-- **Resolution**: 选择视频的分辨率。
+- **Folder**: Set the folder containing videos.
+- **Subtitles**: Choose whether to include subtitles in the video.
+- **Speed ​​Up**: Set the video playback speed.
+- **FPS**: Set the frame rate of the video.
+- **Resolution**: Select the resolution of the video.
 
-## 技术细节
+Technical Details
 
-### AI 语音识别
-我们的 AI 语音识别功能现在基于 [WhisperX](https://github.com/m-bain/whisperX) 实现。WhisperX 是一个高效的语音识别系统，建立在 OpenAI 开发的 Whisper 系统之上。它不仅能够精确地将语音转换为文本，还能自动对齐时间，并识别每句话的说话人物。这种先进的处理方式不仅提高了处理速度和准确度，还为用户提供了更丰富的信息，例如说话者的识别。
+AI Voice Recognition
+Our AI speech recognition capabilities are now based on [WhisperX](https://github.com/m-bain/whisperX). WhisperX is an efficient speech recognition system built on the Whisper system developed by OpenAI. It not only accurately converts speech to text, but also automatically aligns time and identifies the speaker of each sentence. This advanced processing method not only improves processing speed and accuracy, but also provides users with richer information, such as speaker identification.
 
-### 大型语言模型翻译
-我们的翻译功能继续使用 OpenAI API 提供的各种模型，包括官方的 GPT 模型。同时，我们也在利用诸如 [api-for-open-llm](https://github.com/xusenlinzy/api-for-open-llm) 这样的项目，这使我们能够更灵活地整合和利用不同的大型语言模型进行翻译工作，确保翻译质量和效率。
+### Large Language Model Translation
+Our translation function continues to use various models provided by the OpenAI API, including the official GPT model. At the same time, we are also leveraging projects such as [api-for-open-llm](https://github.com/xusenlinzy/api-for-open-llm), which enables us to more flexibly integrate and utilize different large language models for translation work, ensuring translation quality and efficiency.
 
-### AI 声音克隆
-在声音克隆方面，我们已经转向使用 [Coqui AI TTS](https://github.com/coqui-ai/TTS)。同时，对于单一说话人的情况，我们采用了火山引擎进行 TTS，以获得更优质的音质。火山引擎的高级技术能够生成极其自然且流畅的语音，适用于各种应用场景，提升了最终产品的整体质量。
+### AI Voice Cloning
+For voice cloning, we have turned to [Coqui AI TTS](https://github.com/coqui-ai/TTS). At the same time, for single-speaker situations, we use Volcano Engine for TTS to obtain better sound quality. Volcano Engine's advanced technology can generate extremely natural and fluent voices, which are suitable for a variety of application scenarios and improve the overall quality of the final product.
 
-### 视频处理
-在视频处理方面，我们依然强调音视频的同步处理。我们的目标是确保音频与视频画面的完美对齐，并生成准确的字幕，从而为用户提供一个无缝且沉浸式的观看体验。我们的处理流程和技术确保了视频内容的高质量和观看的连贯性。
+### Video Processing
+In terms of video processing, we still emphasize the synchronization of audio and video. Our goal is to ensure perfect alignment of audio and video and generate accurate subtitles to provide users with a seamless and immersive viewing experience. Our processing flow and technology ensure the high quality of video content and the continuity of viewing.
 
 
-## 贡献指南
-欢迎对 `YouDub-webui` 进行贡献。您可以通过 [GitHub Issues](https://github.com/liuzhao1225/YouDub-webui/issues) 或 [Pull Request](https://github.com/liuzhao1225/YouDub-webui/pulls) 提交改进建议或报告问题。
+## Contribution Guidelines
+Welcome to contribute to `YouDub-webui`. You can submit improvement suggestions or report problems through [GitHub Issues](https://github.com/liuzhao1225/YouDub-webui/issues) or [Pull Request](https://github.com/liuzhao1225/YouDub-webui/pulls).
 
-## 许可协议
-`YouDub-webui` 遵循 Apache License 2.0。使用本工具时，请确保遵守相关的法律和规定，包括版权法、数据保护法和隐私法。未经原始内容创作者和/或版权所有者许可，请勿使用此工具。
+## License Agreement
+`YouDub-webui` is licensed under the Apache License 2.0. When using this tool, please ensure that you comply with relevant laws and regulations, including copyright, data protection, and privacy laws. Do not use this tool without the permission of the original content creator and/or copyright owner.
 
-## 支持与联系方式
-如需帮助或有任何疑问，请通过 [GitHub Issues](https://github.com/liuzhao1225/YouDub-webui/issues) 联系我们。
-加入我们的Discord服务器进行讨论和获取支持：[Discord服务器](https://discord.gg/vbkYnN2Rrm)
-你也可以加入我们的微信群，扫描下方的二维码即可：
+## Support and Contact
+If you need help or have any questions, please contact us through [GitHub Issues](https://github.com/liuzhao1225/YouDub-webui/issues).
+Join our Discord server for discussion and support: [Discord server](https://discord.gg/vbkYnN2Rrm)
+You can also join our WeChat group by scanning the QR code below:
 
 ![WeChat Group](https://github.com/liuzhao1225/YouDub/blob/main/docs/d50300d5db9d8cc71861174fc5d33b1.jpg)
